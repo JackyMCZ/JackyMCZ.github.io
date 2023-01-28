@@ -327,7 +327,7 @@
 <li>存根（stub，也称打桩）</li>
 </ol>
 <p>在实际应用中创建测试数据时，应该结合工具来考虑如何提供这几部分数据。</p>
-<h5 id="数据提供"><a href="#数据提供" class="headerlink" title="数据提供"></a>数据提供</h5><p>JUnit5提供了一些参数化测试的工具，还是挺灵活的。我尝试了其中几种，各有千秋。</p>
+<h5 id="数据提供"><a href="#数据提供" class="headerlink" title="数据提供"></a>数据提供</h5><p><a target="_blank" rel="noopener" href="https://junit.org/junit5/">JUnit5</a>提供了一些参数化测试的工具，还是挺灵活的。我尝试了其中几种，各有千秋。</p>
 <ul>
 <li><p><code>@CsvFileSource</code>，数据来源注解之一，这个注解可以读取一个csv文件中的内容，转化为测试方法的参数。<br>  适用于测试参数类型都是JUnit所支持的（非客户化类型），且参数数量不多的场景。如果参数中有客户化类型，JUnit无法自动转化，需要借助其他工具来实现。当参数数量很多时，应该考虑重新设计和重构代码，因为一个方法的参数太多不是一个好的编程实践，容易出错，不好维护。</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@ParameterizedTest</span><br><span class="hljs-meta">@CsvFileSource(resources = &quot;/two-column.csv&quot;, numLinesToSkip = 1)</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">testWithCsvFileSourceFromClasspath</span><span class="hljs-params">(String country, <span class="hljs-type">int</span> reference)</span> &#123;<br>    assertNotNull(country);<br>    assertNotEquals(<span class="hljs-number">0</span>, reference);<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -382,6 +382,11 @@
 </ul>
 </li>
 </ul>
+<hr>
+<p>引用：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://junit.org/junit5/docs/current/user-guide/">JUnit 5 User Guide</a></li>
+</ol>
 
                 
               </div>
@@ -451,9 +456,15 @@
             
               
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
                   </span>
                 </a>
               
