@@ -24,7 +24,7 @@
 <meta property="og:description" content="当Service层的业务代码变得越来越臃肿、越来越不好维护的时候，何不重拾面向对象程序设计，让代码拥有更丰富的语义、更合理的组织、更强的可维护性和可测试性？">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-06T10:53:32.000Z">
-<meta property="article:modified_time" content="2024-05-27T11:43:58.877Z">
+<meta property="article:modified_time" content="2024-05-27T12:06:16.442Z">
 <meta property="article:author" content="JackyMCZ">
 <meta property="article:tag" content="面向对象程序设计">
 <meta property="article:tag" content="OOP">
@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"jackymcz.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-27JGRHVCGE","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"jackymcz.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":"G-27JGRHVCGE"},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -87,20 +87,6 @@
   
 
   
-    <!-- Google gtag.js -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-27JGRHVCGE', function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-27JGRHVCGE');
-        });
-      }
-    </script>
-  
-
-  
 
   
 
@@ -111,7 +97,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.2.0"></head>
 
 
 <body>
@@ -142,7 +128,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -154,7 +140,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -166,7 +152,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -178,7 +164,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -190,7 +176,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -249,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.7k 字
+          1.8k 字
         
       </span>
     
@@ -260,7 +246,7 @@
         
         
         
-          56 分钟
+          15 分钟
         
       </span>
     
@@ -297,8 +283,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">在SpringBoot中应用面向对象程序设计</h1>
+            <h1 id="seo-header">在SpringBoot中应用面向对象程序设计</h1>
             
             
               <div class="markdown-body">
@@ -372,11 +357,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">#面向对象程序设计</a>
+        <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="print-no-link">#面向对象程序设计</a>
       
-        <a href="/tags/OOP/">#OOP</a>
+        <a href="/tags/OOP/" class="print-no-link">#OOP</a>
       
-        <a href="/tags/Spring-Boot/">#Spring Boot</a>
+        <a href="/tags/Spring-Boot/" class="print-no-link">#Spring Boot</a>
       
     </div>
   
@@ -412,13 +397,13 @@
             
               
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>
                 </a>
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">
                   <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
                     <i class="iconfont icon-nc"></i>
                   </span>
